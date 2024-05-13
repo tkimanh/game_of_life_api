@@ -27,9 +27,9 @@ You've noticed that the community often turns to the official website conwaylife
 You decide to team up with other developer friends who share this interest to develop the Proof Of Concept (POC) of a wiki/simulator platform dedicated to the Game of Life.
 
 ### This platform will allow:
-Discovering the main rules/mechanics of the Game of Life
-Experimenting with the Game of Life interactively via a simulator
-Publishing detailed configuration sheets of pixel configurations (for administrators only)
+- Discovering the main rules/mechanics of the Game of Life
+- Experimenting with the Game of Life interactively via a simulator
+- Publishing detailed configuration sheets of pixel configurations (for administrators only)
 
 ### Wiki
 The wiki will group a set of sorted configurations. A configuration is defined by:
@@ -43,19 +43,17 @@ Français ⬇
 Le Jeu de la Vie est un modèle mathématique imaginé en 1970 par John
 Conway.
 Il s’agit d’un automate cellulaire où des cellules évoluent sur une grille
-bidimensionnelle
-à chaque tour selon des règles bien précises.
+bidimensionnelle à chaque tour selon des règles bien précises.
 Un cellule peut être dans 2 états : morte ou vivante.
 
 A partir de cet état initial, notre automate peut commencer à prendre vie à
 travers un enchaînement de générations où nos cellules respectent 3 règles :
-Naissance : si une ⬛ cellule morte est entourée d’exactement 3 🟪
+- Naissance : si une ⬛ cellule morte est entourée d’exactement 3 🟪
 cellules vivantes, elle prend vie.
-Mort : si une 🟪 cellule vivante est entourée de moins de 2 ou plus de 3 🟪
+- Mort : si une 🟪 cellule vivante est entourée de moins de 2 ou plus de 3 🟪
 cellules vivantes, elle meurt (on parle de sous-population et de
 surpopulation).
-
-Survie : si une 🟪 cellule vivante est entourée de 2 ou 3 🟪 cellules
+- Survie : si une 🟪 cellule vivante est entourée de 2 ou 3 🟪 cellules
 vivantes, elle survit.
 
 💡 Chaque cellule à 8 cellules voisines hormis celles aux extrémités de la
@@ -66,8 +64,9 @@ simulation de la vie, avec des pixels. On parle aussi de Vie Artificielle.
 ### 4 grandes catégories de configuration
 A mesure que la communauté de passionnés du jeu de la vie étudie et teste des
 placements de pixels et leurs évolutions, des schémas de vie se distinguent ;
-on parle de configurations ou « patterns ». Parmi les grandes configurations,
-on détaillera les 4 principales :
+on parle de configurations ou « patterns ». 
+
+Parmi les grandes configurations, on détaillera les 4 principales :
 - Les natures mortes : Les natures mortes sont des configurations statiques. Elles ne changent
 pas au fil des tours.
 - Les oscillateurs : Les oscillateurs sont des configurations qui suivent un cycle. Elles
