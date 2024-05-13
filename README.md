@@ -1,5 +1,43 @@
 # Game of life API
 
+English ⬇
+## Understanding the Game of Life
+### Rules
+The Game of Life is a mathematical model conceived in 1970 by John Conway. It is a cellular automaton where cells evolve on a two-dimensional grid at each turn according to specific rules. A cell can be in one of two states: dead or alive.
+
+From this initial state, our automaton can come to life through a series of generations where our cells follow 3 rules:
+- Birth: if a ⬛ dead cell is surrounded by exactly 3 🟪 live cells, it comes to life.
+- Death: if a 🟪 live cell is surrounded by fewer than 2 or more than 3 🟪 live cells, it dies (referred to as underpopulation and overpopulation).
+- Survival: if a 🟪 live cell is surrounded by 2 or 3 🟪 live cells, it survives.
+
+💡 Each cell has 8 neighboring cells except those at the edges of the grid if it is finite. By chaining the generations, this mathematical model allows for creating a simulation of life, with pixels. This is also known as Artificial Life.
+
+### 4 major configuration categories
+As the community of Game of Life enthusiasts studies and tests pixel placements and their evolutions, life patterns emerge; these are referred to as configurations or "patterns". Among the major configurations, we'll detail the 4 main ones:
+
+- Still lifes: Still lifes are static configurations. They do not change over the turns.
+- Oscillators: Oscillators are configurations that follow a cycle. They return to their initial state after a certain number of generations (referred to as period).
+- Spaceships: Spaceships are configurations that can move. They act like oscillators that return to their initial state at a different position on the grid.
+- Guns: Guns are configurations that repetitively produce another type of configuration (usually spaceships). They are akin to factories constructing spaceships.
+
+### Problem Statement
+As an enthusiast of the Game of Life, you want to introduce it to the general public.
+
+You've noticed that the community often turns to the official website conwaylife.com to discover the mechanics and configurations of the game. Although this resource is a goldmine in terms of content, it is not very user-friendly and does not provide a good UI/UX. This "raw" aspect does not facilitate its discovery and accessibility to the general public.
+You decide to team up with other developer friends who share this interest to develop the Proof Of Concept (POC) of a wiki/simulator platform dedicated to the Game of Life.
+
+### This platform will allow:
+Discovering the main rules/mechanics of the Game of Life
+Experimenting with the Game of Life interactively via a simulator
+Publishing detailed configuration sheets of pixel configurations (for administrators only)
+
+### Wiki
+The wiki will group a set of sorted configurations. A configuration is defined by:
+
+Name
+Configuration type
+
+Français ⬇
 ## Comprendre le jeu de la vie
 ### Règles
 Le Jeu de la Vie est un modèle mathématique imaginé en 1970 par John
