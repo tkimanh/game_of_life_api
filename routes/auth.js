@@ -27,24 +27,20 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Authentification échouée." });
     }
 
-    const passwordMatch = bcrypt.compare(
-      password,
-      userLogin.password,
-      function (err, response) {
-        if (err) {
-          return res.status(401).json({ message: "Authentification échouée." });
-        }
-        if (response) {
-          const jwtToken = jwt.sign({ username }, process.env.JWT_SECRET, {
-            expiresIn: "1h",
-          });
-          res.cookie("jwtToken", jwtToken, { httpOnly: true, secure: true });
-          res.json({ jwtToken });
-        } else {
-          return res.status(401).json({ message: "Mauvais mot de passe" });
-        }
+    bcrypt.compare(password, userLogin.password, function (err, response) {
+      if (err) {
+        return res.status(401).json({ message: "Authentification échouée." });
       }
-    );
+      if (response) {
+        const jwtToken = jwt.sign({ username }, process.env.JWT_SECRET, {
+          expiresIn: "1h",
+        });
+        res.cookie("jwtToken", jwtToken, { httpOnly: true, secure: true });
+        res.json({ jwtToken });
+      } else {
+        return res.status(401).json({ message: "Mauvais mot de passe" });
+      }
+    });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError) {
       return res.status(401).json({ message: error.message });
