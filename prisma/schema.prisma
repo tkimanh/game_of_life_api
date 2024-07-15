@@ -26,7 +26,19 @@ enum Role {
 }
 
 model Pattern {
-  id      Int    @id @default(autoincrement())
-  name    String @unique @db.VarChar(255)
-  pattern String
+  id            Int             @id @default(autoincrement())
+  name          String          @unique @db.VarChar(255)
+  description   String          @db.Text
+  Configuration Configuration[]
+}
+
+model Configuration {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique @db.VarChar(255)
+  boundingBox String
+  cells       Int
+  period      Int
+  speed       Int
+  pattern     Pattern @relation(fields: [patternId], references: [id])
+  patternId   Int
 }

@@ -6,9 +6,11 @@ const auth = require("../middlewares/auth.js");
 
 const authRoutes = require("./auth.js");
 const usersRouter = require("./users.js");
+const patternRoutes = require("./patterns.js");
 
 router.use("/", authRoutes);
 
 router.use("/users", usersRouter);
+router.use("/patterns", patternRoutes);
 
 module.exports = router;
