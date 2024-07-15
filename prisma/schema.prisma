@@ -14,13 +14,19 @@ datasource db {
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  username   String   @unique @db.VarChar(255)
-	password   String
-  role       Role     @default(USER)
+  id       Int    @id @default(autoincrement())
+  username String @unique @db.VarChar(255)
+  password String
+  role     Role   @default(USER)
 }
 
 enum Role {
-	USER
-	ADMIN
+  USER
+  ADMIN
+}
+
+model Pattern {
+  id      Int    @id @default(autoincrement())
+  name    String @unique @db.VarChar(255)
+  pattern String
 }
